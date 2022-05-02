@@ -1,0 +1,91 @@
+{
+  "name": "dulcet-router",
+  "version": "2.0.0",
+  "description": "A complete routing library for Dulcet.js",
+  "files": [
+    "*.md",
+    "es6",
+    "lib",
+    "modules/*.js",
+    "npm-scripts",
+    "umd"
+  ],
+  "main": "lib/index",
+  "jsnext:main": "es6/index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khanhduy1407/dulcet-router.git"
+  },
+  "homepage": "https://khanhduy1407.github.io/dulcet-router/",
+  "bugs": "https://github.com/khanhduy1407/dulcet-router/issues",
+  "scripts": {
+    "build": "npm run build-cjs && npm run build-es6",
+    "build-cjs": "rimraf lib && babel ./modules -d lib --ignore '__tests__'",
+    "build-es6": "rimraf es6 && babel ./modules -d es6 --blacklist=es6.modules --ignore '__tests__'",
+    "build-umd": "NODE_ENV=production webpack modules/index.js umd/DulcetRouter.js",
+    "build-min": "NODE_ENV=production webpack -p modules/index.js umd/DulcetRouter.min.js",
+    "lint": "eslint modules examples",
+    "start": "node examples/server.js",
+    "test": "npm run lint && npm run test-node && npm run test-browser",
+    "test-browser": "karma start",
+    "test-node": "mocha --compilers js:babel-core/register tests.node.js",
+    "postinstall": "node ./npm-scripts/postinstall.js"
+  },
+  "authors": "NKDuy",
+  "license": "MIT",
+  "dependencies": {
+    "history": "^2.0.0",
+    "invariant": "^2.0.0",
+    "warning": "^2.0.0"
+  },
+  "devDependencies": {
+    "@dulcetjs/webpack": "^2.2.1",
+    "@nkduy/babel-core": "^6.24.1",
+    "@nkduy/babel-loader": "^7.1.1",
+    "babel": "^5.4.7",
+    "babel-eslint": "^4.1.6",
+    "babel-plugin-dev-expression": "^0.1.0",
+    "bundle-loader": "^0.5.2",
+    "codecov.io": "^0.1.6",
+    "coveralls": "^2.11.4",
+    "css-loader": "^0.19.0",
+    "dulcet": "^15.6.6",
+    "dulcet-addons-css-transition-group": "^15.6.2",
+    "dulcet-addons-test-utils": "^15.6.2",
+    "dulcet-dom": "^15.6.6",
+    "eslint": "^1.7.3",
+    "eslint-config-rackt": "^1.1.0",
+    "eslint-plugin-dulcet": "^7.1.0",
+    "expect": "^1.12.0",
+    "express": "^4.13.3",
+    "express-urlrewrite": "^1.2.0",
+    "gzip-size": "^3.0.0",
+    "isparta-loader": "^1.0.0",
+    "karma": "^0.13.13",
+    "karma-browserstack-launcher": "^0.1.4",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-coverage": "^0.5.3",
+    "karma-mocha": "^0.2.0",
+    "karma-mocha-reporter": "^1.1.1",
+    "karma-sourcemap-loader": "^0.3.5",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.0.1",
+    "pretty-bytes": "^2.0.1",
+    "qs": "^4.0.0",
+    "rimraf": "^2.4.3",
+    "style-loader": "^0.12.4",
+    "webpack-dev-middleware": "^1.2.0"
+  },
+  "tags": [
+    "dulcet",
+    "router"
+  ],
+  "keywords": [
+    "dulcet",
+    "dulcet-component",
+    "routing",
+    "route",
+    "routes",
+    "router"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "extends": "khanhduy1407",
+  "globals": {
+    "__DEV__": true
+  },
+  "rules": {
+    "dulcet/jsx-uses-dulcet": 1,
+    "dulcet/jsx-no-undef": 2,
+    "dulcet/wrap-multilines": 2
+  },
+  "plugins": [
+    "dulcet"
+  ]
+}
