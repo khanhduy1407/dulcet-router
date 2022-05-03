@@ -1,4 +1,4 @@
-var webpack = require('webpack')
+var webpack = require('@dulcetjs/webpack')
 
 module.exports = {
 

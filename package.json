@@ -1,6 +1,6 @@
 {
   "name": "dulcet-router",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A complete routing library for Dulcet.js",
   "files": [
     "*.md",
@@ -49,10 +49,11 @@
     "codecov.io": "^0.1.6",
     "coveralls": "^2.11.4",
     "css-loader": "^0.19.0",
-    "dulcet": "^15.6.6",
-    "dulcet-addons-css-transition-group": "^15.6.2",
-    "dulcet-addons-test-utils": "^15.6.2",
-    "dulcet-dom": "^15.6.6",
+    "dulcet": "^15.6.7",
+    "dulcet-addons-css-transition-group": "^15.6.3",
+    "dulcet-addons-test-utils": "^15.6.3",
+    "dulcet-dom": "^15.6.7",
+    "dulcet-webpack-dev-middleware": "^1.11.0",
     "eslint": "^1.7.3",
     "eslint-config-rackt": "^1.1.0",
     "eslint-plugin-dulcet": "^7.1.0",
@@ -73,8 +74,7 @@
     "pretty-bytes": "^2.0.1",
     "qs": "^4.0.0",
     "rimraf": "^2.4.3",
-    "style-loader": "^0.12.4",
-    "webpack-dev-middleware": "^1.2.0"
+    "style-loader": "^0.12.4"
   },
   "tags": [
     "dulcet",

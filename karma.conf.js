@@ -1,5 +1,5 @@
 /*eslint no-console: 0*/
-var webpack = require('webpack')
+var webpack = require('@dulcetjs/webpack')
 var path = require('path')
 
 module.exports = function (config) {
@@ -94,7 +94,7 @@ module.exports = function (config) {
     ],
 
     preprocessors: {
-      'tests.webpack.js': [ 'webpack', 'sourcemap' ]
+      'tests.webpack.js': [ '@dulcetjs/webpack', 'sourcemap' ]
     },
 
     webpack: {
